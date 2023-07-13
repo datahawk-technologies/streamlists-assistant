@@ -32,10 +32,6 @@ if "show_settings" not in st.session_state:
     st.session_state["show_settings"] = False
 
 
-def saveOpenAI():
-
-
-
 def toggleSettings():
     st.session_state["show_settings"] = not st.session_state["show_settings"]
 
@@ -268,8 +264,6 @@ with st.sidebar:
             st.text_input(
                 "Warehouse:", key="txtSNOWWarehouse", help="Enter Snowflake Warehouse"
             )
-
-            st.form_submit_button("Submit", on_click=saveOpenAI)
 
     chat_list = []
     chat_list.append("GPT-4")
