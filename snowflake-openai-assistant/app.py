@@ -62,7 +62,7 @@ token_limit = 6000
 temperature = 0.2
 
 st.set_page_config(
-    page_title="Snowflake OpenAI Assistant", page_icon=":chart:", layout="wide"
+    page_title="DataHawk AI Assistant", page_icon=":chart:", layout="wide"
 )
 
 st.markdown(
