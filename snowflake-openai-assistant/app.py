@@ -27,19 +27,6 @@ def load_setting(setting_name, session_name, default_value=""):
             st.session_state[session_name] = default_value
 
 
-load_setting("AZURE_OPENAI_CHATGPT_DEPLOYMENT", "chatgpt", "gpt-35-turbo")
-load_setting("AZURE_OPENAI_GPT4_DEPLOYMENT", "gpt4", "gpt-35-turbo")
-load_setting(
-    "AZURE_OPENAI_ENDPOINT", "endpoint", "https://resourcenamehere.openai.azure.com/"
-)
-load_setting("AZURE_OPENAI_API_KEY", "apikey")
-load_setting("SNOW_ACCOUNT", "snowaccount")
-load_setting("SNOW_USER", "snowuser")
-load_setting("SNOW_PASSWORD", "snowpassword")
-load_setting("SNOW_ROLE", "snowrole")
-load_setting("SNOW_DATABASE", "snowdatabase")
-load_setting("SNOW_SCHEMA", "snowschema")
-load_setting("SNOW_WAREHOUSE", "snowwarehouse")
 
 if "show_settings" not in st.session_state:
     st.session_state["show_settings"] = False
@@ -68,7 +55,7 @@ def toggleSettings():
 
 #openai.api_type = "azure"
 #openai.api_version = "2023-03-15-preview"
-openai.api_key = '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'
+openai.api_key = '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'
 #openai.api_base = st.session_state.endpoint
 max_response_tokens = 1500
 token_limit = 6000
