@@ -66,10 +66,10 @@ def toggleSettings():
     st.session_state["show_settings"] = not st.session_state["show_settings"]
 
 
-openai.api_type = "azure"
-openai.api_version = "2023-03-15-preview"
-openai.api_key = st.session_state.apikey
-openai.api_base = st.session_state.endpoint
+#openai.api_type = "azure"
+#openai.api_version = "2023-03-15-preview"
+openai.api_key = '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'
+#openai.api_base = st.session_state.endpoint
 max_response_tokens = 1500
 token_limit = 6000
 temperature = 0.2
