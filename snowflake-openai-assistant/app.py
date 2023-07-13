@@ -287,12 +287,7 @@ with st.sidebar:
     chat_list = []
     chat_list.append("GPT-4")
     gpt_engine = st.selectbox("GPT Model", chat_list)
-    if gpt_engine == "ChatGPT":
-        gpt_engine = st.session_state.chatgpt
-        faq = faq_dict["ChatGPT"]
-    else:
-        gpt_engine = st.session_state.gpt4
-        faq = faq_dict["GPT-4"]
+    faq = faq_dict["GPT-4"]
 
     option = st.selectbox("FAQs", faq)
 
