@@ -317,7 +317,7 @@ with st.sidebar:
     question = st.text_area("Ask me a question", option)
 
     if st.button("Submit"):
-        if (
+        '''if (
             st.session_state.apikey == ""
             or st.session_state.endpoint == ""
             or st.session_state.chatgpt == ""
@@ -329,16 +329,17 @@ with st.sidebar:
             or st.session_state.snowpassword == ""
             or st.session_state.snowrole == ""
         ):
-            st.error("You need to specify Snowflake Settings!")
+            st.error("You need to specify Snowflake Settings!")'''
         else:
+            
             sql_query_tool = SQL_Query(
-                account_identifier=st.session_state.snowaccount,
-                db_user=st.session_state.snowuser,
-                db_password=st.session_state.snowpassword,
-                db_role=st.session_state.snowrole,
-                db_name=st.session_state.snowdatabase,
-                db_schema=st.session_state.snowschema,
-                db_warehouse=st.session_state.snowwarehouse
+                account_identifier=st.secrets["connections.snowpark"]["account"]
+                db_user=st.secrets["connections.snowpark"]["user"]
+                db_password=st.secrets["connections.snowpark"]["password"]
+                db_role=st.secrets["connections.snowpark"]["role"]
+                db_name=st.secrets["connections.snowpark"]["database"]
+                db_schema=st.secrets["connections.snowpark"]["schema"]
+                db_warehouse=st.secrets["connections.snowpark"]["warehouse"]
             )
             analyzer = AnalyzeGPT(
                 content_extractor=extractor,
