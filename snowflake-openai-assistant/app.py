@@ -297,7 +297,7 @@ with st.sidebar:
                 max_response_tokens=max_response_tokens,
                 token_limit=token_limit,
                 temperature=temperature,
-                db_schema=db_schema=st.secrets["schema"]
+                db_schema=st.secrets["schema"]
             )
             if index == 0:
                 analyzer.query_run(question, show_code, show_prompt, col1)
