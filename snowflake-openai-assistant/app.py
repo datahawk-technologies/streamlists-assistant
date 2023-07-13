@@ -285,10 +285,7 @@ with st.sidebar:
             st.form_submit_button("Submit", on_click=saveOpenAI)
 
     chat_list = []
-    if st.session_state.chatgpt != "":
-        chat_list.append("ChatGPT")
-    if st.session_state.gpt4 != "":
-        chat_list.append("GPT-4")
+    chat_list.append("GPT-4")
     gpt_engine = st.selectbox("GPT Model", chat_list)
     if gpt_engine == "ChatGPT":
         gpt_engine = st.session_state.chatgpt
