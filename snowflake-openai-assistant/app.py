@@ -317,21 +317,7 @@ with st.sidebar:
     question = st.text_area("Ask me a question", option)
 
     if st.button("Submit"):
-        '''if (
-            st.session_state.apikey == ""
-            or st.session_state.endpoint == ""
-            or st.session_state.chatgpt == ""
-        ):
-            st.error("You need to specify Azure Open AI Deployment Settings!")
-        elif (
-            st.session_state.snowaccount == ""
-            or st.session_state.snowuser == ""
-            or st.session_state.snowpassword == ""
-            or st.session_state.snowrole == ""
-        ):
-            st.error("You need to specify Snowflake Settings!")'''
-        else:
-            
+       
             sql_query_tool = SQL_Query(
                 account_identifier=st.secrets["connections.snowpark"]["account"]
                 db_user=st.secrets["connections.snowpark"]["user"]
