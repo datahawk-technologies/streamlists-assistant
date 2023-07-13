@@ -319,13 +319,13 @@ with st.sidebar:
     if st.button("Submit"):
        
             sql_query_tool = SQL_Query(
-                account_identifier=st.secrets["connections.snowpark"]["account"],
-                db_user=st.secrets["connections.snowpark"]["user"],
-                db_password=st.secrets["connections.snowpark"]["password"],
-                db_role=st.secrets["connections.snowpark"]["role"],
-                db_name=st.secrets["connections.snowpark"]["database"],
-                db_schema=st.secrets["connections.snowpark"]["schema"],
-                db_warehouse=st.secrets["connections.snowpark"]["warehouse"]
+                account_identifier=st.secrets["account"],
+                db_user=st.secrets["user"],
+                db_password=st.secrets["password"],
+                db_role=st.secrets["role"],
+                db_name=st.secrets["database"],
+                db_schema=st.secrets["schema"],
+                db_warehouse=st.secrets["warehouse"]
             )
             analyzer = AnalyzeGPT(
                 content_extractor=extractor,
