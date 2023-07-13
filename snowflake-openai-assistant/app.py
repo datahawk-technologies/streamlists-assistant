@@ -33,20 +33,7 @@ if "show_settings" not in st.session_state:
 
 
 def saveOpenAI():
-    st.session_state.chatgpt = st.session_state.txtChatGPT
-    st.session_state.gpt4 = st.session_state.txtGPT4
-    st.session_state.endpoint = st.session_state.txtEndpoint
-    st.session_state.apikey = st.session_state.txtAPIKey
-    st.session_state.snowaccount = st.session_state.txtSNOWAccount
-    st.session_state.snowuser = st.session_state.txtSNOWUser
-    st.session_state.snowpassword = st.session_state.txtSNOWPasswd
-    st.session_state.snowrole = st.session_state.txtSNOWRole
-    st.session_state.snowdatabase = st.session_state.txtSNOWDatabase
-    st.session_state.snowschema = st.session_state.txtSNOWSchema
-    st.session_state.snowwarehouse = st.session_state.txtSNOWWarehouse
 
-    # We can close out the settings now
-    st.session_state["show_settings"] = False
 
 
 def toggleSettings():
@@ -316,7 +303,7 @@ with st.sidebar:
                 max_response_tokens=max_response_tokens,
                 token_limit=token_limit,
                 temperature=temperature,
-                db_schema=st.session_state.snowschema
+                db_schema=db_schema=st.secrets["schema"]
             )
             if index == 0:
                 analyzer.query_run(question, show_code, show_prompt, col1)
