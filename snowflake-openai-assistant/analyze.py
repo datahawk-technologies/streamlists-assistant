@@ -85,7 +85,7 @@ class ChatGPT_Handler:  # designed for chat completion API
 
     def _call_llm(self, prompt, stop):
         response = openai.ChatCompletion.create(
-            engine=self.gpt_deployment,
+            #engine=self.gpt_deployment,
             messages=prompt,
             temperature=self.temperature,
             max_tokens=self.max_response_tokens,
