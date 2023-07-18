@@ -38,7 +38,7 @@ def toggleSettings():
 
 #openai.api_type = "azure"
 #openai.api_version = "2023-03-15-preview"
-openai.api_key = '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'
+openai.api_key = st.secrets["openai_key"]
 #openai.api_base = st.session_state.endpoint
 max_response_tokens = 1500
 token_limit = 6000
